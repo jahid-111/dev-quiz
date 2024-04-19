@@ -2,11 +2,36 @@
 
 
 import React from 'react';
+import { useLoaderData } from 'react-router-dom';
+import Question from '../components/Question';
 
 const Quiz = () => {
+    const dataQuiz = useLoaderData();
+    // console.log(dataQuiz.data.questions)
+    // const [] = dataQuiz.data.questions;
+    const questions =  dataQuiz.data.questions;
+    // console.log(questions)
+    console.log("data",dataQuiz.data)
     return (
         <div>
-            question question question question question question question 
+                <div className=' flex justify-start items-center gap-4 bg-red-300  px-4 rounded-sm border-3'>
+                    <img className=' h-52 w-52' src={dataQuiz.data.logo} alt="" />
+                    <div className=' '>
+                        <h3 className=' text-3xl'>Name :  {dataQuiz.data.name}</h3>
+                        <p className=' text-xl'>Total {dataQuiz.data.total}</p>
+                    </div>
+                </div>
+
+            <div className=' mx-auto sm:px-24'>   
+                {   
+                    questions.map( question => <Question
+                        key={question.id}
+                        questions ={question}
+                    ></Question>)
+                }
+            </div>
+
+
         </div>
     );
 };

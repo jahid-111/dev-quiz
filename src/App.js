@@ -10,6 +10,7 @@ import Error from './root/Error';
 
 
 
+
   const router =  createBrowserRouter ( [
 
 
@@ -26,9 +27,26 @@ import Error from './root/Error';
 
         {path : "quiz", element : <Quiz></Quiz>},
         {path : "blog", element : <Blog></Blog>},
+   
+      {path : "home/quiz/quiz/:id", 
+        loader : async ({params})=> {
+          // console.log(params)
+          return fetch(`https://openapi.programming-hero.com/api/quiz/${params.id}`)
+        }, element : <Quiz></Quiz>},
 
-        {path : "home/quiz", element : <Quiz></Quiz>},
+
+        // {
+        //   path : "text",
+        //     loader :   async () => {
+        //       return fetch ('https://openapi.programming-hero.com/api/quiz/1')
+        //     }, element : <Question></Question> 
+        // }
+ 
     ]},
+
+
+
+
     {path : '*', element : <Error></Error>}
 
 

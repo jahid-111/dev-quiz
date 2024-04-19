@@ -1,18 +1,16 @@
 
 
 
-import React, { useContext } from 'react';
+ 
 import Cover from '../components/Cover';
-
 import Catagory from '../components/Catagory';
-import { QuizContex } from './Root';
 import { useLoaderData } from 'react-router-dom';
  
 
 const Main = () => {
     
     const thumnails = useLoaderData();
-    console.log(thumnails.data)
+    // console.log(thumnails.data)
     return (
         <>
             <Cover></Cover>

@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import './App.css';
 import Root from './root/Root';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
@@ -14,13 +14,22 @@ import Error from './root/Error';
 
 
     {path : "/", element : <Root></Root>, children : [
-      {path : "/", element : <Main></Main>},
-      {path : "home", element : <Main></Main>},
-      {path : "quiz", element : <Quiz></Quiz>},
-      {path : "blog", element : <Blog></Blog>}
+      {path : "/", 
+        loader : async () => {
+          return fetch ('https://openapi.programming-hero.com/api/quiz');
+        }, element : <Main></Main>},
+      {path : "home", 
+        loader : async () => {
+          return fetch ('https://openapi.programming-hero.com/api/quiz');
+        }, element : <Main></Main>},
+
+
+        {path : "quiz", element : <Quiz></Quiz>},
+        {path : "blog", element : <Blog></Blog>},
+
+        {path : "home/quiz", element : <Quiz></Quiz>},
     ]},
     {path : '*', element : <Error></Error>}
-
 
 
   ] )
@@ -34,7 +43,7 @@ import Error from './root/Error';
 function App() {
   return (
     <div className=" md:px-24 mx-auto">
-      
+      {/* USE CONTEX API */}
       <RouterProvider router={router}></RouterProvider>
     </div>
   );

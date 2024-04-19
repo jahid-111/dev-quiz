@@ -1,17 +1,34 @@
 
 
 
-import React from 'react';
+import React, { useContext } from 'react';
 import Cover from '../components/Cover';
 
 import Catagory from '../components/Catagory';
+import { QuizContex } from './Root';
+import { useLoaderData } from 'react-router-dom';
+ 
 
 const Main = () => {
+    
+    const thumnails = useLoaderData();
+    console.log(thumnails.data)
     return (
-        <div>
+        <>
             <Cover></Cover>
-            <Catagory></Catagory>
+
+        <div className='  my-6 grid grid-cols-2 sm:grid-cols-4 justify-evenl items-center gap-2'>
+            {
+                thumnails.data.map( thumnail => <Catagory
+                    key={thumnail.id}
+                    thumnail={thumnail}
+                ></Catagory>)
+            }
         </div>
+
+
+
+        </>
     );
 };
 

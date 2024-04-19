@@ -3,19 +3,38 @@
 
 
 
-import React from 'react';
+import React, { createContext, useEffect, useState } from 'react';
 import Header from '../components/Header';
-import Cover from '../components/Cover';
 import { Outlet } from 'react-router-dom';
-import Main from './Main';
+;
+
+ 
+export const QuizContex =  createContext('quiz_thumnail')
+
+
+
+
+
+
+
+
+
+
+
 
 
 const Root = () => {
+
+    
+
     return (
+
+  
         <div>
             <Header></Header>
             <Outlet></Outlet>
-            
+          
+             
         </div>
     );
 };

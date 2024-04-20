@@ -9,7 +9,7 @@ const Cover = () => {
         <div className=' bg-[#f7f7f7] px-2 rounded-b-md md:flex md:flex-row-reverse'>
             
             <div className=' w-full sm:w-6/12'>
-                <img className=' w-full h-40 sm:h-56'  src="https://www.pngitem.com/pimgs/m/124-1247029_digital-skills-social-media-hd-png-download.png" alt="" />
+                <img className=' w-full h-40 sm:h-72'  src="https://www.pngitem.com/pimgs/m/124-1247029_digital-skills-social-media-hd-png-download.png" alt="" />
             </div>
 
             <div className=' w-full sm:w-6/12 flex justify-start items-center'>
@@ -19,7 +19,7 @@ const Cover = () => {
                     <span className=' text-orange-600'>Skill</span>
               </h2>
             </div>
-            
+
         </div>
     );
 };

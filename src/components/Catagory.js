@@ -15,7 +15,7 @@ const Catagory = ({ thumnail }) => {
                     <h5 className=' text-md font-mono'>Total  {total}</h5>
                 </div>
                 <div className=' my-auto'>
-                    <Link to={`quiz/quiz/${id}`}>
+                    <Link to={`/home/quiz/quiz/${id}`}>
                         <button className='bg-yellow-700 px-5 rounded-md py-1 font-semibold text-white'>Start</button>
                     </Link>
                 </div>

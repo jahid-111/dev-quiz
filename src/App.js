@@ -13,7 +13,6 @@ import Error from './root/Error';
 
   const router =  createBrowserRouter ( [
 
-
     {path : "/", element : <Root></Root>, children : [
       {path : "/", 
         loader : async () => {
@@ -24,28 +23,19 @@ import Error from './root/Error';
           return fetch ('https://openapi.programming-hero.com/api/quiz');
         }, element : <Main></Main>},
 
-
-        // {path : "quiz", element : <Quiz></Quiz>},
         {path : "blog", element : <Blog></Blog>},
    
-      {path : "home/quiz/quiz/:id", 
+      {path : "/home/quiz/quiz/:id", 
         loader : async ({params})=> {
-          // console.log(params)
           return fetch(`https://openapi.programming-hero.com/api/quiz/${params.id}`)
         }, element : <Quiz></Quiz>},
     ]},
-
-
 
 
     {path : '*', element : <Error></Error>}
 
 
   ] )
-
-
-
-
 
 
 

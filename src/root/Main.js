@@ -14,18 +14,15 @@ const Main = () => {
     return (
         <>
             <Cover></Cover>
-
-        <div className='  my-6 grid grid-cols-2 sm:grid-cols-4 justify-evenl items-center gap-2'>
-            {
-                thumnails.data.map( thumnail => <Catagory
-                    key={thumnail.id}
-                    thumnail={thumnail}
-                ></Catagory>)
-            }
-        </div>
-
-
-
+            
+            <div className='  my-6 grid grid-cols-2 sm:grid-cols-4 justify-evenl items-center gap-2'>
+                {
+                    thumnails.data.map( thumnail => <Catagory
+                        key={thumnail.id}
+                        thumnail={thumnail}
+                    ></Catagory>)
+                }
+            </div>
         </>
     );
 };

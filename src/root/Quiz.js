@@ -11,7 +11,7 @@ const Quiz = () => {
     // const [] = dataQuiz.data.questions;
     const questions =  dataQuiz.data.questions;
     // console.log(questions)
-    console.log("data",dataQuiz.data)
+    // console.log("data",dataQuiz.data)
     return (
         <div>
                 <div className=' flex justify-start items-center gap-4 bg-red-300  px-4 rounded-sm border-3'>

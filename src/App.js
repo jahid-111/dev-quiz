@@ -25,7 +25,7 @@ import Error from './root/Error';
         }, element : <Main></Main>},
 
 
-        {path : "quiz", element : <Quiz></Quiz>},
+        // {path : "quiz", element : <Quiz></Quiz>},
         {path : "blog", element : <Blog></Blog>},
    
       {path : "home/quiz/quiz/:id", 
@@ -33,15 +33,6 @@ import Error from './root/Error';
           // console.log(params)
           return fetch(`https://openapi.programming-hero.com/api/quiz/${params.id}`)
         }, element : <Quiz></Quiz>},
-
-
-        // {
-        //   path : "text",
-        //     loader :   async () => {
-        //       return fetch ('https://openapi.programming-hero.com/api/quiz/1')
-        //     }, element : <Question></Question> 
-        // }
- 
     ]},
 
 

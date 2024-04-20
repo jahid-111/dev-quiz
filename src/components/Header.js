@@ -16,7 +16,7 @@ const Header = () => {
            <nav className=' flex justify-center items-center gap-4 font-semibold'>
 
                 <Link to={"home"}> Home </Link>
-                <Link to={"quiz"}> Quiz </Link>
+                {/* <Link to={"quiz"}> Quiz </Link> */}
                 <Link to={"blog"}> BLog </Link>
                 
            </nav>

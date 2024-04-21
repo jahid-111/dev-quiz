@@ -12,7 +12,7 @@ const Quiz = () => {
     return (
         <div>
             <div className=' flex justify-start items-center gap-4 bg-yellow-300 rounded-b-lg px-4 border-3'>
-                <img className=' h-52 w-52' src={dataQuiz.data.logo} alt="" />
+                <img className='h-36 w-36 sm:h-52 sm:w-52' src={dataQuiz.data.logo} alt="" />
 
                 <div className=' '>
                     <h3 className=' text-3xl'>Name :  {dataQuiz.data.name}</h3>

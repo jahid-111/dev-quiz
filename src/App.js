@@ -41,7 +41,7 @@ import Error from './root/Error';
 
 function App() {
   return (
-    <div className=" md:px-24 mx-auto">
+    <div className=" md:px-24  mx-auto">
       {/* USE CONTEX API */}
       <RouterProvider router={router}></RouterProvider>
     </div>
